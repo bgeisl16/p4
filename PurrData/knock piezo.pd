@@ -1,0 +1,33 @@
+#N canvas 953 0 942 977 24;
+#X msg 107 90 devices;
+#X msg 486 92 close;
+#X obj 296 168 comport 2 9600;
+#X obj 180 279 print;
+#X obj 305 371 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 358 373 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 287 656 readsf~;
+#X obj 288 755 dac~;
+#X msg 50 498 open C:/Users/Bikki/Downloads/Bass-Drum-1.wav \, 1;
+#X msg 297 53 open 3;
+#X obj 298 278 route 49 50;
+#X msg 353 466 open C:/Users/Bikki/Downloads/Alesis-Fusion-Clean-Guitar-C3.wav
+\, 1;
+#X obj 440 648 readsf~;
+#X obj 441 747 dac~;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 10 0;
+#X connect 4 0 8 0;
+#X connect 5 0 11 0;
+#X connect 6 0 7 0;
+#X connect 6 0 7 1;
+#X connect 8 0 6 0;
+#X connect 9 0 2 0;
+#X connect 10 0 4 0;
+#X connect 10 1 5 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 12 0 13 1;
